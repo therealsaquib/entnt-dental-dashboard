@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+    @apply bg-gray-50 text-gray-800 antialiased scroll-smooth;
+  }
+
+  body {
+    @apply text-base leading-relaxed;
+  }
+
+  h1 {
+    @apply text-3xl font-bold text-gray-900;
+  }
+
+  h2 {
+    @apply text-2xl font-semibold text-gray-800;
+  }
+
+  h3 {
+    @apply text-xl font-semibold text-gray-700;
+  }
+
+  a {
+    @apply text-primary hover:text-primary-dark transition-all duration-200;
+  }
+
+  input,
+  select,
+  textarea {
+    @apply border border-gray-300 rounded-md px-4 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition;
+  }
+
+  label {
+    @apply text-sm font-medium text-gray-700 block mb-1;
+  }
+
+  button {
+    @apply transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary;
+  }
+}
+
+/* -----------------------------------
+🎨 CUSTOM COLORS (Project Theme)
+------------------------------------ */
+@layer utilities {
+  .bg-primary {
+    @apply bg-blue-600;
+  }
+
+  .bg-primary-dark {
+    @apply bg-blue-700;
+  }
+
+  .text-primary {
+    @apply text-blue-600;
+  }
+
+  .text-primary-dark {
+    @apply text-blue-700;
+  }
+
+  .bg-accent {
+    @apply bg-teal-500;
+  }
+
+  .bg-accent-dark {
+    @apply bg-teal-600;
+  }
+
+  .bg-soft {
+    @apply bg-blue-50;
+  }
+
+  .text-soft {
+    @apply text-blue-400;
+  }
+
+  .bg-danger {
+    @apply bg-red-500;
+  }
+
+  .text-danger {
+    @apply text-red-500;
+  }
+}
+
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center px-4 py-2 rounded-lg font-medium text-white bg-primary hover:bg-primary-dark shadow transition;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center px-4 py-2 rounded-lg font-medium text-primary border border-primary hover:bg-blue-50 transition;
+  }
+
+  .btn-danger {
+    @apply inline-flex items-center justify-center px-4 py-2 rounded-lg font-medium text-white bg-danger hover:bg-red-600;
+  }
+
+  .card {
+    @apply bg-white rounded-xl p-6 shadow-lg transition-all;
+  }
+
+  .input-group {
+    @apply space-y-2 mb-4;
+  }
+
+  .form-container {
+    @apply bg-white rounded-xl shadow p-6 md:p-8 w-full max-w-xl;
+  }
+
+  .heading-section {
+    @apply text-xl font-semibold text-gray-800 mb-4;
+  }
+
+  .nav-link {
+    @apply flex items-center gap-3 text-gray-600 hover:text-primary hover:bg-blue-50 px-4 py-2 rounded-lg transition;
+  }
+
+  .avatar {
+    @apply w-9 h-9 rounded-full border-2 border-primary;
+  }
+}
